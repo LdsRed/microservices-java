@@ -1,0 +1,13 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: inventory
+    environment:
+      MYSQL_ROOT_PASSWORD: 1998
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: 1998
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./docker/mariadb/data:/var/lib/mysql
