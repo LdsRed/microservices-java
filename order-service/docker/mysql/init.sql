@@ -1,3 +1,0 @@
-CREATE DATABASE IF NOT EXISTS order_service;
-GRANT ALL PRIVILEGES ON order_service.* TO 'admin'@'%';
-FLUSH PRIVILEGES;
